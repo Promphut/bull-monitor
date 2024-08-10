@@ -23,6 +23,11 @@ export class ConfigService {
      * to manually set keyspace notifications)
      */
     REDIS_CONFIGURE_KEYSPACE_NOTIFICATIONS: bool({ default: true }),
+
+    /**
+     * If REDIS_KEYSPACE_NOTIFICATIONS_VALUE is set, REDIS_CONFIGURE_KEYSPACE_NOTIFICATIONS will not be used
+     */
+    REDIS_KEYSPACE_NOTIFICATIONS_VALUE: str({ default: null }),
     /**
      * Redis database number
      */

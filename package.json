@@ -11,7 +11,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "ci:build": "npm run build && docker-compose build bull-monitor",
+    "ci:build": "npm run build && docker compose build bull-monitor",
     "ci:publish": "npm run ci:build && docker-compose push bull-monitor",
     "format": "prettier --write .",
     "generate": "ACTION=createprocess MAX_JOB_DELAY_MS=200 LIMITER_MAX=200 CREATE_DELAY_MS=50 CONCURRENCY=15 ts-node bull_generator.ts",
@@ -80,7 +80,7 @@
     "@types/express": "^4.17.13",
     "@types/forever-monitor": "^1.7.6",
     "@types/jest": "^28.1.4",
-    "@types/node": "^18.0.0",
+    "@types/node": "^18.19.44",
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
